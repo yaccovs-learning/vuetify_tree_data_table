@@ -712,9 +712,15 @@ export default {
      * @param {Object} node The Node
      */
     nodeStyle(node) {
-      return {
-        paddingLeft: 8 + 12 * node.depth + "px"
-      };
+      if (this.$vuetify.rtl){
+        return {
+          paddingRight: 8 + 12 * node.depth + "px"
+        };
+      } else {
+        return {
+          paddingLeft: 8 + 12 * node.depth + "px"
+        };
+      }
     },
 
     /**
