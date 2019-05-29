@@ -49,7 +49,7 @@
             </v-btn>
           </td>
           <td v-if="props.item.leaf" class="expandable-node" style="width: 0.1%" :style="nodeStyle(props.item)">
-            <v-icon>keyboard_arrow_right</v-icon>
+            <v-icon>keyboard_arrow_{{($vuetify.rtl?"left":"right")}}</v-icon>
           </td>
           <td v-else class="expandable-node" @click="toggleNode(props.item)" style="width: 0.1%" :style="nodeStyle(props.item)">
             <v-icon>{{expandableIcon(props.item)}}</v-icon>
@@ -67,7 +67,7 @@
             </v-btn>
           </td>
           <td v-if="props.item.leaf" class="expandable-node" style="width: 0.1%" :style="nodeStyle(props.item)">
-            <v-icon>keyboard_arrow_right</v-icon>
+            <v-icon>keyboard_arrow_{{($vuetify.rtl?"left":"right")}}</v-icon>
           </td>
           <td v-else class="expandable-node" @click="toggleNode(props.item)" style="width: 0.1%" :style="nodeStyle(props.item)">
             <v-icon>{{expandableIcon(props.item)}}</v-icon>

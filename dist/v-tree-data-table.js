@@ -181,12 +181,12 @@ module.exports = Symbol;
   props: {
     headers: {
       type: Array,
-      default: [],
+      "default": [],
       required: true
     },
     items: {
       type: Array,
-      default: [],
+      "default": [],
       required: true
     },
     pagination: {
@@ -203,7 +203,7 @@ module.exports = Symbol;
     },
     rowsPerPageItems: {
       type: Array,
-      default: function _default() {
+      "default": function _default() {
         return [5, 10, 25, {
           text: "$vuetify.dataIterator.rowsPerPageAll",
           value: -1
@@ -212,19 +212,19 @@ module.exports = Symbol;
     },
     rowsPerPageText: {
       type: String,
-      default: "$vuetify.dataTable.rowsPerPageText"
+      "default": "$vuetify.dataTable.rowsPerPageText"
     },
     selectAll: {
       type: [Boolean, String],
-      default: undefined
+      "default": undefined
     },
     value: {
       type: Array,
-      default: undefined
+      "default": undefined
     },
     validDrop: {
       type: Function,
-      default: undefined
+      "default": undefined
     }
   },
   mounted: function mounted() {
@@ -636,7 +636,7 @@ module.exports = Symbol;
      * @param {Object} node The Node
      */
     nodeStyle: function nodeStyle(node) {
-      if (this.$vuetify.rtl){
+      if (this.$vuetify.rtl) {
         return {
           paddingRight: 8 + 12 * node.depth + "px"
         };
@@ -2009,7 +2009,12 @@ var render = function() {
                                   },
                                   [
                                     _c("v-icon", [
-                                      _vm._v("keyboard_arrow_right")
+                                      _vm._v(
+                                        "keyboard_arrow_" +
+                                          _vm._s(
+                                            _vm.$vuetify.rtl ? "left" : "right"
+                                          )
+                                      )
                                     ])
                                   ],
                                   1
@@ -2148,7 +2153,12 @@ var render = function() {
                                   },
                                   [
                                     _c("v-icon", [
-                                      _vm._v("keyboard_arrow_right")
+                                      _vm._v(
+                                        "keyboard_arrow_" +
+                                          _vm._s(
+                                            _vm.$vuetify.rtl ? "left" : "right"
+                                          )
+                                      )
                                     ])
                                   ],
                                   1
